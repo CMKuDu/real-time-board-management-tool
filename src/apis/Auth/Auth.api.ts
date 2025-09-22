@@ -6,6 +6,8 @@ import { RequestRegisterDTO } from "./dto/req/ResquestRegister.dto"
 import { ResponseRegisterDTO } from "./dto/res/ResponseRegister.dto"
 import { RequestEmailDTO } from "./dto/req/ResquestEmail.dto"
 import { ResponseLoginEmailDTO } from "./dto/res/ReponseEmail.dto"
+import { ResquestVerifyCodeDTO } from "./dto/req/ResquestVerifycode.dto"
+import { ResponseVerifyCodeDTO } from "./dto/res/ResponseVerifyCode.dto"
 
 const END_POINT = "/auth"
 export const AuthAPI = {
@@ -30,5 +32,13 @@ export const AuthAPI = {
             reqBody
         );
         return res.data;
+    },
+    async VerifycodeLogin(reqBody: ResquestVerifyCodeDTO): Promise<ResponseVerifyCodeDTO> {
+        const res = await axiosClient.post<ResponseApi<ResponseVerifyCodeDTO>>(
+            `${END_POINT}/verify-otp`,
+            reqBody
+        );
+        return res.data;
     }
+
 }

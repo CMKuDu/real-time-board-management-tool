@@ -2,11 +2,11 @@ import CookieTokenService from '@/utils/CookieTokenService';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface AuthSate {
-    accessToken: string | null;
+    token: string | null;
 }
 
 const initialState: AuthSate = {
-    accessToken: CookieTokenService.getAccessToken() || null,
+    token: CookieTokenService.getAccessToken() || null,
 }
 
 const authModalSlice = createSlice({
@@ -14,11 +14,11 @@ const authModalSlice = createSlice({
     initialState,
     reducers: {
         setAccessToken: (state, action: PayloadAction<string>) => {
-            state.accessToken = action.payload;
+            state.token = action.payload;
             CookieTokenService.setAccessToken(action.payload);
         },
         clearAccessToken: (state) => {
-            state.accessToken = null;
+            state.token = null;
             CookieTokenService.clearAll();
         }
     }

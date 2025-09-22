@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "@/lib/provider/ReduxProvider";
-import LoginForm from "./components/LoginForm";
+import AuthFlow from "./components/AuthFlow";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +32,7 @@ export default function RootLayout({
         <ReduxProvider>
 
           {children}
-          <LoginForm></LoginForm>
+          <AuthFlow />
         </ReduxProvider>
       </body>
     </html>

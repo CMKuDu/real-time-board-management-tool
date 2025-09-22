@@ -6,6 +6,7 @@ const request = axios.create({
   baseURL: ENV.NEXT_PUBLIC_API_URL,
   withCredentials: true,
 });
+
 export const axiosClient = {
   async get<T>(path: string, options?: AxiosRequestConfig): Promise<T> {
     const response: AxiosResponse<T> = await request.get(path, options);
