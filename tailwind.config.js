@@ -10,12 +10,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Có thể thêm custom colors nếu cần
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
       animation: {
-        // Custom animations nếu cần
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-down': 'slideDown 0.3s ease-out',
       },
@@ -32,8 +30,6 @@ module.exports = {
     },
   },
   plugins: [
-    // Có thể thêm plugins nếu cần
-    // require('@tailwindcss/forms'),
-    // require('@tailwindcss/typography'),
+   
   ],
 }

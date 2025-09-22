@@ -23,7 +23,7 @@ class CookieTokenService {
     }
     static setRefreshToken(refreshToken: string) {
         Cookies.set(this.REFRESHTOKEN, refreshToken, {
-            expires: 30, // 30 ngày
+            expires: 30,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'lax'
         });

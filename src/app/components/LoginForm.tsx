@@ -22,10 +22,8 @@ interface ResponseLoginEmailDTO {
   // };
 }
 
-// Props interface
 interface LoginFormProps {
   onEmailSuccess?: (email: string, response: ResponseLoginEmailDTO) => void;
-  // Redux actions
   // setAccessToken?: (token: string) => void;
 }
 
@@ -71,71 +69,56 @@ export default function LoginForm({ onEmailSuccess }: LoginFormProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 flex items-center justify-center relative overflow-hidden">
-      {/* Left illustration */}
       <div className="absolute bottom-0 left-0 w-80 h-64">
         <div className="relative w-full h-full">
-          {/* Platform base */}
           <div className="absolute bottom-0 left-12 w-32 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
 
-          {/* Building blocks */}
           <div className="absolute bottom-2 left-8 w-6 h-12 bg-gradient-to-b from-blue-400 to-blue-600 rounded-sm"></div>
           <div className="absolute bottom-2 left-16 w-8 h-16 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-sm"></div>
           <div className="absolute bottom-2 left-26 w-6 h-10 bg-gradient-to-b from-blue-300 to-blue-500 rounded-sm"></div>
 
-          {/* Person figure */}
           <div className="absolute bottom-14 left-20 w-3 h-6 bg-gradient-to-b from-orange-400 to-orange-600 rounded-full"></div>
           <div className="absolute bottom-20 left-20 w-3 h-3 bg-orange-300 rounded-full"></div>
 
-          {/* Floating elements */}
           <div className="absolute bottom-32 left-24 w-2 h-2 bg-cyan-300 rounded-full animate-pulse"></div>
           <div className="absolute bottom-28 left-32 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse delay-100"></div>
           <div className="absolute bottom-36 left-28 w-1 h-1 bg-cyan-500 rounded-full animate-pulse delay-200"></div>
         </div>
       </div>
 
-      {/* Right illustration */}
       <div className="absolute bottom-0 right-0 w-80 h-64">
         <div className="relative w-full h-full">
-          {/* Platform base */}
           <div className="absolute bottom-0 right-12 w-32 h-2 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full"></div>
 
-          {/* Chart/Analytics elements */}
           <div className="absolute bottom-2 right-8 w-8 h-20 bg-gradient-to-b from-blue-400 to-blue-600 rounded-sm"></div>
           <div className="absolute bottom-2 right-18 w-6 h-14 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-sm"></div>
           <div className="absolute bottom-2 right-26 w-4 h-10 bg-gradient-to-b from-blue-300 to-blue-500 rounded-sm"></div>
 
-          {/* Magnifying glass */}
           <div className="absolute bottom-24 right-16 w-8 h-8 border-2 border-blue-500 rounded-full"></div>
           <div className="absolute bottom-20 right-12 w-4 h-1 bg-blue-500 rounded-full transform rotate-45"></div>
 
-          {/* Person figures */}
           <div className="absolute bottom-22 right-24 w-3 h-6 bg-gradient-to-b from-orange-400 to-orange-600 rounded-full"></div>
           <div className="absolute bottom-28 right-24 w-3 h-3 bg-orange-300 rounded-full"></div>
 
           <div className="absolute bottom-14 right-32 w-3 h-6 bg-gradient-to-b from-blue-400 to-blue-600 rounded-full"></div>
           <div className="absolute bottom-20 right-32 w-3 h-3 bg-blue-300 rounded-full"></div>
 
-          {/* Floating elements */}
           <div className="absolute bottom-35 right-20 w-2 h-2 bg-cyan-300 rounded-full animate-pulse"></div>
           <div className="absolute bottom-32 right-28 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse delay-150"></div>
         </div>
       </div>
 
-      {/* Main login card */}
       <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 w-full max-w-md mx-4 z-10 backdrop-blur-sm bg-white/95">
-        {/* Logo */}
         <div className="flex justify-center mb-8">
           <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center shadow-lg">
             <span className="text-white font-bold text-xl">S</span>
           </div>
         </div>
 
-        {/* Title */}
         <h2 className="text-gray-600 text-sm font-medium mb-8 text-center">
           Log in to continue
         </h2>
 
-        {/* Login Form */}
         <div className="space-y-6">
           <div className="space-y-2">
             <Input

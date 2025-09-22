@@ -45,7 +45,6 @@ export default function EmailVerification({
     setIsLoading(true);
     setError('');
     try {
-      console.log("Haha0");
       const response = await AuthAPI.VerifycodeLogin({
         email,
         code: verificationCode
